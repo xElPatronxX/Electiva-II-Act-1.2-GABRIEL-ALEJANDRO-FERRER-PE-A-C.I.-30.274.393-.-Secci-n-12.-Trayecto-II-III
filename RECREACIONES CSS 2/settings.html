@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Nro 2. Gabriel Alejandro Ferrer Peña. C.I.: 30.274.393. Seccion 12. Trayecto II-III</title>
+
+    
+    <link rel="stylesheet" href="holyengine.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+
+        #goBack {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #000;
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+
+
+<body class="area">
+
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+</ul>
+
+    <div id="goBack" onclick="goToHomePage()">
+        <i class="fas fa-arrow-circle-left"></i>
+    </div>
+    
+    <br><br><br><div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fa fa-user"></i>
+                </a>
+
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa fa-credit-card"></i>
+                </a>
+
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fa fa-tv"></i>
+                </a>
+
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fa fa-tasks"></i>
+                </a>
+
+                <a onclick="tabs(4)" class="tab">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Info</h1>
+                <h2>Birthday</h2>
+                <input type="text" class="input" value="April 20, 1992">
+                <h2>Gender</h2>
+                <input type="text" class="input" value="Female">
+                <h2>Email</h2>
+                <input type="text" class="input" value="Example@example.com">
+                <h2>Password</h2>
+                <input type="text" class="input" value="brightcode">
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="payment tabShow">
+                <h1>Payment Info</h1>
+                <h2>Payment Method</h2>
+                <input type="text" class="input" value="MasterCard - 0202 ******** 7336">
+                <h2>Billing Address</h2>
+                <input type="text" class="input" value="1234 some street in a town">
+                <h2>Zipcode</h2>
+                <input type="text" class="input" value="419911">
+                <h2>Billing Date</h2>
+                <input type="text" class="input" value="Jan 20, 2017">
+                <h2>Redeem Card</h2>
+                <input type="password" class="input" value="Enter Gift Code">
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="Subscription tabShow">
+                <h1>Subscription Settings</h1>
+                <h2>Subscription Info</h2>
+                <p>May 12, 2019</p>
+                <h2>Next Charges</h2>
+                <p>$80.56 <span>includes tax</span></p>
+                <h2>Plan</h2>
+                <p>Full Plan</p>
+                <h2>Monthly</h2>
+                <p>$107.99/Month</p>
+
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="privacy tabShow">
+                <h1>Privacy Settings</h1>
+                <h2>Manage Email Noti.</h2>
+                <p></p>
+                <h2>Manage Privacy Settings</h2>
+                <p></p>
+                <h2>View Terms Of Use</h2>
+                <p></p>
+                <h2>Personalized Ad Expirience</h2>
+                <p></p>
+                <h2>Protect Account</h2>
+                <p></p>
+
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="settings tabShow">
+                <h1>Account Settings</h1>
+                <h2>Sync WatchList</h2>
+                <p></p>
+                <h2>Hold Subscription</h2>
+                <p></p>
+                <h2>Cancel Subscription</h2>
+                <p></p>
+                <h2>Your Devices</h2>
+                <p></p>
+                <h2>Referrals</h2>
+                <p></p>
+
+                <button class="btn">Update</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        const tabBtn = document.querySelectorAll(".tab");
+        const tab = document.querySelectorAll(".tabShow");
+
+        function tabs(panelIndex) {
+            tab.forEach(function (node) {
+                node.style.display = "none";
+            });
+            tab[panelIndex].style.display = "block";
+        }
+
+        tabs(0);
+    </script>
+
+    <script>
+        jQuery(".tab").click(function () {
+            jQuery(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+</body>
+</html>

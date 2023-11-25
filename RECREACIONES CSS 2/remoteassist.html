@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Nro 2. Gabriel Alejandro Ferrer Peña. C.I.: 30.274.393. Seccion 12. Trayecto II-III</title>
+
+    <link rel="stylesheet" href="holyjarvys.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+
+        #welcomeScreen {
+            position: relative;
+        }
+
+        #goBack {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <section class="main" id="welcomeScreen">
+
+        <div class="image-container">
+
+            <div class="image">
+                <img src="Disorder.gif" alt="image" style="height: 250px;">
+            </div>
+
+            <h1>V I R T U A L<br>A S S I S T A N T</h1>
+
+            <p>I'm your Virtual Assistant Today, How may I help you?</p>
+        </div>
+
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content"> Click here to speak</h1>
+        </div>
+
+        <div id="goBack" onclick="goToHomePage()">
+            <i class="fas fa-arrow-circle-left"></i>
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html";
+        }
+    </script>
+    
+</body>
+
+
+
+</html>
